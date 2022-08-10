@@ -17,7 +17,13 @@ spec:
       containers:
       - image: mmkmou/udagram-api-user
         name: udagram-api-user
-        resources: {}
+        resources:
+          limits:
+            cpu: 500m
+            memory: 2Gi
+          requests:
+            cpu: 250m
+            memory: 512Mi
         volumeMounts:
           - name: aws-secret
             mountPath: /root/.aws
