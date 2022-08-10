@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: udagram-reverseproxy
+  name: udagram-reverseproxy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: udagram-reverseproxy
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: udagram-reverseproxy
+    spec:
+      containers:
+      - image: mmkmou/reverseproxy
+        name: reverseproxy
+        resources: {}
+status: {}
