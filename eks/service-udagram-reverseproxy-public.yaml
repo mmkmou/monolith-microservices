@@ -12,5 +12,4 @@ spec:
   selector:
     app: udagram-reverseproxy
   type: LoadBalancer
-status:
-  loadBalancer: {}
+
